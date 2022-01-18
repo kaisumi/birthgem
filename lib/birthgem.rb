@@ -22,13 +22,21 @@ module Birthgem
     9 => %w[Sapphire],
     10 => %w[Opal Tourmaline],
     11 => %w[Citrine],
-    12 => %w[Blue Topaz Tanzanite Blue Zircon]
+    12 => ['Blue Topaz', 'Tanzanite', 'Blue Zircon']
   }.freeze
 
   ##
   # Outputs the birthstone(s) of the month for the date in the argument.
   def self.stone(date)
-    parsed_date = Date.parse(date)
-    STONE_BY_MONTH[parsed_date.month]
+    key =
+      if date.instance_of?(Integer)
+        date
+      elsif date.instance_of?(String)
+        parsed_date = Date.parse(date)
+        parsed_date.month
+      elsif date.instance_of?(Date)
+        date.month
+      end
+    STONE_BY_MONTH[key] unless key.nil?
   end
 end

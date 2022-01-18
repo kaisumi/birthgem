@@ -5,7 +5,7 @@ RSpec.describe Birthgem do
     expect(Birthgem::VERSION).not_to be nil
   end
 
-  it 'does something useful' do
-    expect(false).to eq(true)
+  it 'outputs a birthstone' do
+    expect(Birthgem.stone('2022-1-18')).to eq %w[Garnet]
   end
 end

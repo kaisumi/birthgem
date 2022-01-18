@@ -19,7 +19,7 @@ module Birthgem
     11 => %w[Citrine],
     12 => %w[Blue Topaz Tanzanite Blue Zircon]
   }.freeze
-  def stone(date)
+  def self.stone(date)
     parsed_date = Date.parse(date)
     STONE_BY_MONTH(parsed_date.month)
   end

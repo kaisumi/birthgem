@@ -31,7 +31,6 @@ require 'date'
 birthday = Date.new(1993, 2, 24)
 Birthgem.stone(birthday)
 # => ['Amethyst']
-
 ````
 ## Contributing
 1. Fork it ( https://github.com/kaisumi/birthgem/fork )

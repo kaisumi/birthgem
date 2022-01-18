@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email = ['kaisumi@langue-lab.com']
 
   spec.summary = 'Find your birthgem.'
-  spec.description = 'You can find birthgem of entered month of birth.'
+  spec.description = 'You can find the birthstone(s) of your birthday.'
   spec.homepage = 'https://github.com/kaisumi/birthgem'
   spec.license = 'MIT'
   spec.required_ruby_version = '>= 2.6.0'

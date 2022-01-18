@@ -3,8 +3,13 @@
 require_relative 'birthgem/version'
 require 'date'
 
+##
+# This module lets you know the birstone(s) for an entered birthday.
+
 module Birthgem
-  class Error < StandardError; end
+  ##
+  # The birthstones are selected according to [International Gem Society](https://www.gemsociety.org/article/birthstone-chart/).
+
   STONE_BY_MONTH = {
     1 => %w[Garnet],
     2 => %w[Amethyst],
@@ -19,6 +24,9 @@ module Birthgem
     11 => %w[Citrine],
     12 => %w[Blue Topaz Tanzanite Blue Zircon]
   }.freeze
+
+  ##
+  # Outputs the birthstone(s) of the month for the date in the argument.
   def self.stone(date)
     parsed_date = Date.parse(date)
     STONE_BY_MONTH[parsed_date.month]

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    birthgem (0.1.0)
+    birthgem (1.0.1)
 
 GEM
   remote: https://rubygems.org/

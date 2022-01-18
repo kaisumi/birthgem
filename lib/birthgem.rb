@@ -21,6 +21,6 @@ module Birthgem
   }.freeze
   def self.stone(date)
     parsed_date = Date.parse(date)
-    STONE_BY_MONTH(parsed_date.month)
+    STONE_BY_MONTH[parsed_date.month]
   end
 end

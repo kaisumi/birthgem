@@ -40,3 +40,10 @@ module Birthgem
     STONE_BY_MONTH[key] unless key.nil?
   end
 end
+
+class Date
+  # Outputs the birthstone in Date class.
+  def birthgem
+    Birthgem::STONE_BY_MONTH[month]
+  end
+end

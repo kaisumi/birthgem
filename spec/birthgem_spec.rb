@@ -14,8 +14,11 @@ RSpec.describe Birthgem do
   end
 
   it 'outputs a birthstone with date' do
-    require 'date'
     birthday = Date.new(1993, 2, 24)
     expect(Birthgem.stone(birthday)).to eq %w[Amethyst]
+  end
+
+  it 'outputs a birthstone in Date' do
+    expect(Date.new(1989, 7, 27).birthgem).to eq %w[Ruby]
   end
 end

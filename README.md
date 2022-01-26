@@ -27,10 +27,12 @@ Birthgem.stone('2022-01-18')
 Birthgem.stone(10)
 # => ['Opal', 'Tourmaline']
 
-require 'date'
 birthday = Date.new(1993, 2, 24)
 Birthgem.stone(birthday)
 # => ['Amethyst']
+
+Date.new(1989, 7, 27).birthgem
+# => ['Ruby']
 ````
 ## Contributing
 1. Fork it ( https://github.com/kaisumi/birthgem/fork )
